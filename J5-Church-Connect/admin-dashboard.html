@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>
+Admin Dashboard
+</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  
+<button class="menu-toggle" onclick="toggleSidebar()">
+☰
+</button>
+
+<div class="admin-layout">
+
+
+<aside class="sidebar">
+
+<div class="j5-logo">
+
+<div class="logo-icon">
+
+<img src="IMG-20260814-WA0005-removebg-preview.png/IMG-20260814-WA0005-removebg-preview.png" class="j5-logo-image">
+
+</div>
+
+<h2>
+J5 Church Connect
+</h2>
+
+<p>
+CYBERLYNX SYSTEM
+</p>
+
+</div>
+
+
+<a href="admin-dashboard.html">
+<i class="fa-solid fa-house"></i> Dashboard
+</a>
+
+<a href="user-management.html">
+<i class="fa-solid fa-users"></i> Members
+</a>
+
+<a href="branch-management.html">
+<i class="fa-solid fa-church"></i> Branches
+</a>
+
+<a href="permission-control.html">
+<i class="fa-solid fa-shield-halved"></i> Security
+</a>
+
+<a href="events-data.html">
+<i class="fa-solid fa-calendar"></i> Events
+</a>
+
+<a href="giving-data.html">
+<i class="fa-solid fa-coins"></i> Finance
+</a>
+
+<a href="ministry-data.html">
+<i class="fa-solid fa-people-group"></i> Ministries
+</a>
+
+<a href="login.html">
+<i class="fa-solid fa-right-from-bracket"></i> Logout
+</a>
+
+
+</aside>
+
+
+
+<main class="admin-content">
+
+
+<header>
+
+<header class="admin-header">
+
+<div class="header-brand">
+
+<img src="IMG-20260814-WA0005-removebg-preview.png/IMG-20260814-WA0005-removebg-preview.png"
+" class="header-logo">
+
+<div>
+<h1>
+J5 Admin Control Centre
+</h1>
+
+<p>
+Church Management Command Centre
+</p>
+</div>
+
+</div>
+
+
+<div class="system-badge">
+
+<span class="status-dot"></span>
+CYBERLYNX ONLINE
+
+</div>
+
+</header>
+
+
+
+<section class="dashboard">
+
+
+<a href="user-management.html" class="card blue">
+
+<div class="icon">
+<i class="fa-solid fa-users"></i>
+</div>
+
+<h2>
+Members
+</h2>
+
+<p>
+Manage church members
+</p>
+
+</a>
+
+
+
+<a href="branch-management.html" class="card gold">
+
+
+<div class="icon">
+<i class="fa-solid fa-church"></i>
+</div>
+<h2>
+Branches
+</h2>
+
+<p>
+Multi-branch control
+</p>
+
+</a>
+
+
+
+<div class="card green">
+
+<div class="icon">
+<i class="fa-solid fa-coins"></i>
+</div>
+
+<h2>
+Finance
+</h2>
+
+<p>
+Giving overview
+</p>
+
+</div>
+
+
+
+
+<a href="permission-control.html" class="card red">
+
+<div class="icon">
+<i class="fa-solid fa-shield-halved"></i>
+</div>
+
+<h2>
+Security
+</h2>
+
+<p>
+Permissions & logs
+</p>
+
+</a>
+
+
+
+<div class="card blue">
+
+<div class="icon">
+<i class="fa-solid fa-robot"></i>
+</div>
+
+<h2>
+AI System
+</h2>
+
+<p>
+Intelligence status
+</p>
+
+</div>
+
+
+</section>
+
+
+
+
+<div class="admin-card">
+
+<h2>
+System Overview
+</h2>
+
+<p>
+👥 Total Members: 4,500
+</p>
+
+<p>
+⛪ Active Branches: 1
+</p>
+
+<p>
+📅 Upcoming Events: 12
+</p>
+
+<p>
+🙏 Prayer Requests: 25
+</p>
+
+<p>
+💰 Monthly Giving: Active
+</p>
+
+</div>
+
+
+</main>
+
+
+</div>
+
+<script>
+
+function toggleSidebar(){
+
+    document.querySelector(".sidebar")
+    .classList.toggle("active");
+
+}
+
+
+function updateTime(){
+
+    const now = new Date();
+
+    document.getElementById("system-time").innerHTML =
+    "🕒 " + now.toLocaleString();
+
+}
+
+
+setInterval(updateTime, 1000);
+
+updateTime();
+
+</script>
+
+
+  <footer class="cyber-footer">
+
+<p>
+© 2026 J5 Church Connect | Designed By J5 Software Engineer Cliff
+</p>
+
+<p class="system-status">
+<span class="status-dot"></span>
+System Online | Version 1.0
+</p>
+
+<p id="system-time">
+Loading system time...
+</p>
+
+</footer>
+</body>
+
+</html>

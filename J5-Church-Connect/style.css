@@ -1,0 +1,2499 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f5f7fb;
+    color: #333;
+}
+
+
+/* Church Header */
+
+header {
+    background: #0646a6;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 5px solid #d4af37;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin-top: 8px;
+    font-size: 15px;
+}
+
+
+/* Dashboard Layout */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 18px;
+    padding: 20px;
+}
+
+
+/* Cards */
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow:0 0 4px rgba(0,255,136,0.5);
+    transition: 0.3s;
+}
+
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+.icon {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+}
+
+
+/* Number */
+
+.card h2 {
+    margin: 15px 0 5px;
+    font-size: 25px;
+}
+
+
+/* Icon Colours */
+
+.blue .icon {
+    background: #0646a6;
+    color: white;
+}
+
+.gold .icon {
+    background: #d4af37;
+    color: white;
+}
+
+.green .icon {
+    background: #16a34a;
+    color: white;
+}
+
+.red .icon {
+    background: #c1121f;
+    color: white;
+}
+
+.purple .icon {
+    background: #7c3aed;
+    color: white;
+}
+
+.orange .icon {
+    background: #f97316;
+    color: white;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+/* Main Navigation */
+
+.menu {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding: 15px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.menu a {
+    min-width: 90px;
+    text-decoration: none;
+    color: #0646a6;
+    background: #f8f9ff;
+    padding: 12px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 13px;
+}
+
+
+.menu span {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+
+.menu a:hover {
+    background: #d4af37;
+    color: white;
+}
+/* Login Page */
+
+
+.login-page {
+    background: #061A40;
+}
+
+
+.login-box {
+    background: #0B1220;
+    border: 1px solid #0A84FF;
+    color: white;
+}
+
+
+.login-box h1 {
+    color: #0A84FF;
+}
+
+
+.login-box h2 {
+    color: white;
+}
+
+
+.login-box input {
+    background: #111827;
+    color: white;
+    border: 1px solid #0A84FF;
+}
+
+
+.login-box button {
+    background: #0A84FF;
+    color: white;
+}
+
+
+.login-box button:hover {
+    background: #0066CC;
+}
+
+
+.forgot {
+
+color:#c1121f;
+font-size:14px;
+
+}
+/* Member Form */
+
+
+.form-box {
+
+background:white;
+margin:20px;
+padding:25px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+
+.form-box input,
+.form-box select {
+
+width:100%;
+padding:15px;
+margin:10px 0;
+border-radius:10px;
+border:1px solid #ddd;
+font-size:16px;
+
+}
+
+
+.form-box button {
+
+width:100%;
+padding:15px;
+background:#0646a6;
+color:white;
+border:none;
+border-radius:10px;
+font-size:18px;
+
+}
+
+
+.form-box button:hover {
+
+background:#d4af37;
+
+}
+/* Member Directory */
+
+
+.search-box {
+
+padding:20px;
+
+}
+
+
+.search-box input {
+
+width:100%;
+padding:15px;
+border-radius:12px;
+border:1px solid #ddd;
+font-size:16px;
+
+}
+
+
+.member-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.member-card button {
+
+background:#0646a6;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+
+}
+
+
+.active {
+
+color:#16a34a;
+font-weight:bold;
+
+}
+
+
+.visitor {
+
+color:#d4af37;
+font-weight:bold;
+
+}
+/* Family Section */
+
+
+.family-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.family-card h2 {
+
+color:#0646a6;
+
+}
+
+
+.family-member {
+
+padding:10px;
+border-bottom:1px solid #eee;
+
+}
+
+
+.relationship {
+
+color:#d4af37;
+font-weight:bold;
+
+}
+.family-card p {
+
+font-size:16px;
+line-height:1.6;
+
+}
+
+
+.family-member {
+
+padding:15px 0;
+font-size:17px;
+
+}
+
+
+.relationship {
+
+color:#c1121f;
+
+}
+.form-box textarea {
+
+width:100%;
+height:120px;
+padding:15px;
+margin:10px 0;
+border-radius:10px;
+border:1px solid #ddd;
+font-size:16px;
+
+}
+/* Follow Up Cards */
+
+
+.follow-box {
+
+padding:20px;
+
+}
+
+
+.follow-card {
+
+background:white;
+padding:20px;
+margin-bottom:15px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.follow-card h2 {
+
+color:#0646a6;
+
+}
+
+
+.follow-card.red {
+
+border-left:8px solid #c1121f;
+
+}
+
+
+.follow-card.gold {
+
+border-left:8px solid #d4af37;
+
+}
+
+
+.follow-card.green {
+
+border-left:8px solid #16a34a;
+
+}
+/* Ministry Profile */
+
+.ministry-header {
+    background: #0646a6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #d4af37;
+}
+
+
+.ministry-card {
+
+    background: white;
+    margin: 15px 20px;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.ministry-card h3 {
+
+    color: #0646a6;
+    margin-bottom: 10px;
+
+}
+
+
+.ministry-stat {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f5f7fb;
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 10px;
+
+}
+
+
+.ministry-stat strong {
+
+    color: #d4af37;
+
+}
+
+
+.ministry-badge {
+
+    display: inline-block;
+    background: #d4af37;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin: 5px;
+
+}
+/* Attendance */
+
+.attendance-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.status-present {
+
+color:#16a34a;
+font-weight:bold;
+
+}
+
+
+.status-absent {
+
+color:#c1121f;
+font-weight:bold;
+
+}
+
+
+.status-visitor {
+
+color:#d4af37;
+font-weight:bold;
+
+}
+/* Attendance History */
+
+
+.attendance-card h2 {
+
+color:#0646a6;
+
+}
+
+
+.attendance-card p {
+
+font-size:16px;
+
+}
+/* Events */
+
+
+.event-card {
+
+background:white;
+padding:20px;
+margin:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.event-card h2 {
+
+color:#0646a6;
+
+}
+
+
+.event-date {
+
+color:#d4af37;
+font-weight:bold;
+
+}
+/* Calendar */
+
+
+.calendar-box {
+
+padding:20px;
+
+}
+
+
+.calendar-box h2 {
+
+text-align:center;
+color:#0646a6;
+
+}
+
+
+.event-card h3 {
+
+margin-top:0;
+
+}
+/* Event Registration */
+
+
+.registration-card {
+
+background:white;
+padding:20px;
+margin:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.registration-card h2 {
+
+color:#0646a6;
+
+}
+/* Prayer Requests */
+
+
+.prayer-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.prayer-card h3 {
+
+color:#c1121f;
+
+}
+
+
+.confidential {
+
+color:#c1121f;
+font-weight:bold;
+
+}
+
+
+.completed {
+
+color:#16a34a;
+font-weight:bold;
+
+}
+.prayer-card button {
+
+background:#0646a6;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+
+}
+
+
+.prayer-card p {
+
+line-height:1.6;
+
+}
+/* Pastoral Visits */
+
+
+.visit-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.visit-card h2 {
+
+color:#0646a6;
+
+}
+
+
+.visit-card button {
+
+background:#d4af37;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+
+}
+/* Finance Dashboard */
+
+
+.finance-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.finance-card h2 {
+
+color:#0646a6;
+
+}
+
+
+.finance-card p {
+
+font-size:17px;
+padding:8px;
+
+}
+/* Giving Forms */
+
+
+.finance-form {
+
+background:white;
+padding:20px;
+margin:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.finance-status {
+
+font-weight:bold;
+color:#16a34a;
+
+}
+/* Giving Records */
+
+
+.giving-record {
+
+background:white;
+padding:20px;
+margin:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.giving-record h3 {
+
+color:#0646a6;
+
+}
+/* Campaigns */
+
+
+.campaign-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,000,0,0.08);
+
+}
+
+
+.campaign-card h2 {
+
+color:#0646a6;
+
+}
+
+
+.campaign-card button {
+
+background:#d4af37;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+
+}
+/* Financial Reports */
+
+
+.report-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.report-card h2 {
+
+color:#0646a6;
+
+}
+
+
+table {
+
+width:100%;
+border-collapse:collapse;
+
+}
+
+
+th, td {
+
+padding:12px;
+text-align:left;
+border-bottom:1px solid #ddd;
+
+}
+
+
+th {
+
+color:#d4af37;
+
+}
+/* Sermon Library */
+
+
+.sermon-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.sermon-card h2 {
+
+color:#0646a6;
+
+}
+
+
+.sermon-card button {
+
+background:#d4af37;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+
+}
+/* Media Forms */
+
+
+.media-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.media-card h2 {
+
+color:#0646a6;
+
+}
+/* Media Search */
+
+
+.search-box {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+
+}
+
+
+.search-box button {
+
+background:#0646a6;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+
+}
+/* Livestream */
+
+
+.stream-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.stream-card h2 {
+
+color:#0646a6;
+
+}
+
+
+.stream-card button {
+
+background:#d4af37;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+
+}
+/* Announcements */
+
+
+.announcement-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.announcement-card h2 {
+
+color:#0646a6;
+
+}
+
+
+.announcement-card button {
+
+background:#0646a6;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+
+}
+/* Communication Forms */
+
+
+.communication-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.communication-card h2 {
+
+color:#0646a6;
+
+}
+/* Notifications */
+
+
+.notification-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.notification-card h2 {
+
+color:#0646a6;
+
+}
+
+
+.notification-card button {
+
+background:#d4af37;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+
+}
+/* Email Marketing */
+
+
+.email-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.email-card h2 {
+
+color:#0646a6;
+
+}
+
+
+.email-card button {
+
+background:#0646a6;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+
+}
+/* Email Campaign Form */
+
+
+.campaign-form {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.campaign-form h2 {
+
+color:#0646a6;
+
+}
+/* Website Analytics */
+
+
+.analytics-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.analytics-card h2 {
+
+color:#0646a6;
+
+}
+/* SEO Centre */
+
+
+.seo-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.seo-card h2 {
+
+color:#0646a6;
+
+}
+/* SEO Optimiser */
+
+
+.seo-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.seo-card h2 {
+
+color:#0646a6;
+
+}
+/* AI Assistant */
+
+
+.ai-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.ai-card h2 {
+
+color:#0646a6;
+
+}
+
+
+.ai-card button {
+
+background:#d4af37;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+
+}
+/* AI Generator */
+
+
+.ai-card button {
+
+background:#0646a6;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+
+}
+
+
+textarea {
+
+width:90%;
+height:120px;
+padding:15px;
+border-radius:12px;
+
+}
+/* AI Search */
+
+
+.ai-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.ai-card h2 {
+
+color:#0646a6;
+
+}
+/* AI Workflows */
+
+
+.ai-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.ai-card h2 {
+
+color:#0646a6;
+
+}
+/* Member Portal */
+
+
+.member-profile {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.portal-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.portal-card h2,
+.member-profile h2 {
+
+color:#0646a6;
+
+}
+/* Member Profile */
+
+
+.profile-card {
+
+background:white;
+margin:20px;
+padding:25px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+text-align:center;
+
+}
+
+
+.profile-card h2 {
+
+color:#0646a6;
+
+}
+
+
+.profile-photo {
+
+font-size:70px;
+margin-bottom:15px;
+
+}
+
+
+.profile-card button {
+
+background:#d4af37;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:10px;
+
+}
+/* Member Events */
+
+
+.event-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.event-card h2 {
+
+color:#0646a6;
+
+}
+
+
+.event-card button {
+
+background:#0646a6;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+
+}
+/* Member Sermons */
+
+
+.search-box {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+
+}
+
+
+.sermon-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.sermon-card h2 {
+
+color:#0646a6;
+
+}
+
+
+.sermon-card button {
+
+background:#d4af37;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+
+}
+
+/* Member Prayer */
+
+
+.prayer-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.prayer-card h2 {
+
+color:#0646a6;
+
+}
+/* Member Giving */
+
+
+.giving-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.giving-card h2 {
+
+color:#0646a6;
+
+}
+
+
+.giving-card button {
+
+background:#d4af37;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+
+}
+/* Member Giving */
+
+
+.giving-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.giving-card h2 {
+
+color:#0646a6;
+
+}
+
+
+.giving-card button {
+
+background:#d4af37;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+
+}
+/* Member Attendance */
+
+
+.attendance-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.attendance-card h2 {
+
+color:#0646a6;
+
+}
+/* Member Ministry */
+
+
+.ministry-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.ministry-card h2 {
+
+color:#0646a6;
+
+}
+
+
+.ministry-card button {
+
+background:#d4af37;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+
+}
+/* Member Announcements */
+
+
+.announcement-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.announcement-card h2 {
+
+color:#0646a6;
+
+}
+/* Complete Member Portal */
+
+
+.member-profile {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.portal-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.portal-card h2,
+.member-profile h2 {
+
+color:#0646a6;
+
+}
+/* Role Dashboard */
+
+
+.role-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.role-card h2 {
+
+color:#0646a6;
+
+}
+
+
+.role-card button {
+
+background:#d4af37;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+
+}
+/* Admin Control Centre */
+
+
+.admin-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.admin-card h2 {
+
+color:#0646a6;
+
+}
+/* Branch Management */
+
+
+.branch-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.branch-card h2 {
+
+color:#0646a6;
+
+}
+
+
+.add-button {
+
+margin:20px;
+background:#d4af37;
+color:white;
+border:none;
+padding:14px 25px;
+border-radius:10px;
+
+}
+/* User Management */
+
+
+.user-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.user-card h2 {
+
+color:#0646a6;
+
+}
+
+
+.user-card button {
+
+background:#0646a6;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+
+}
+/* Permission Control */
+
+
+.permission-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.permission-card h2 {
+
+color:#0646a6;
+
+}
+/* Activity Logs */
+
+
+.log-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.log-card h2 {
+
+color:#0646a6;
+
+}
+/* System Settings */
+
+
+.settings-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.settings-card h2 {
+
+color:#0646a6;
+
+}
+
+
+.settings-card button {
+
+background:#d4af37;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+
+}
+/* Admin Dashboard */
+
+
+.admin-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.admin-card h2 {
+
+color:#0646a6;
+
+}
+/* System Hub */
+
+
+.hub-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.hub-card h2 {
+
+color:#0646a6;
+
+}
+
+
+.hub-card a {
+
+display:block;
+background:#d4af37;
+color:white;
+padding:12px;
+margin:10px 0;
+border-radius:10px;
+text-decoration:none;
+
+}
+.card {
+
+text-decoration:none;
+color:black;
+display:block;
+
+}
+/* Main Menu */
+
+
+.main-menu {
+
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin:20px;
+
+}
+
+
+.main-menu a {
+
+background:#0646a6;
+color:white;
+padding:12px;
+border-radius:10px;
+text-decoration:none;
+
+}
+/* Member Database */
+
+
+.member-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.member-card h2 {
+
+color:#0646a6;
+
+}
+/* Attendance Data */
+
+
+.attendance-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.attendance-card h2 {
+
+color:#0646a6;
+
+}
+/* Giving Data */
+
+
+.giving-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.giving-card h2 {
+
+color:#0646a6;
+
+}
+/* Prayer Data */
+
+
+.prayer-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.prayer-card h2 {
+
+color:#0646a6;
+
+}
+/* Events Data */
+
+
+.event-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.event-card h2 {
+
+color:#0646a6;
+
+}
+/* Ministry Data */
+
+
+.ministry-card {
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+.ministry-card h2 {
+
+color:#0646a6;
+
+}
+/* Mobile Responsive Fix */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+.card,
+.hub-card,
+.admin-card,
+.member-card,
+.attendance-card,
+.giving-card,
+.prayer-card,
+.event-card,
+.ministry-card {
+
+    width: calc(100% - 40px);
+    max-width: 100%;
+    margin: 20px auto;
+
+}
+
+
+.dashboard {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+
+img {
+
+    max-width: 100%;
+    height: auto;
+
+}
+/* Admin Sidebar Layout */
+
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+.sidebar {
+    width: 240px;
+    padding: 20px;
+    background: #061A40;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.sidebar h2 {
+    color: white;
+    margin-bottom: 30px;
+}
+
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+
+.sidebar a:hover {
+    background: #0A84FF;
+}
+
+
+.admin-content {
+    flex: 1;
+    padding: 20px;
+}
+/* CyberLynx Admin Header */
+
+.admin-content header {
+
+    background: #061A40;
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+
+}
+
+
+.admin-content header h1 {
+
+    color: #0A84FF;
+
+}
+
+
+.admin-content header p {
+
+    color: white;
+
+}
+.admin-content header h1 {
+    color: #0A84FF;
+}
+/* Mobile Sidebar Menu */
+
+.menu-toggle {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        z-index: 1000;
+        font-size: 28px;
+        background: #061A40;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 8px;
+    }
+
+
+    .sidebar {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        height: 100%;
+        z-index: 999;
+        transition: 0.3s;
+    }
+
+
+    .sidebar.active {
+        left: 0;
+    }
+
+
+    .admin-content {
+        width: 100%;
+    }
+
+}
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.login-box {
+
+    width: 90%;
+    max-width: 380px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+
+}
+
+
+.login-box input {
+
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+
+.login-box button {
+
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+}
+  /* CyberLynx Sidebar Upgrade */
+
+.sidebar {
+    background: #050B18;
+    border-right: 1px solid #00A8FF;
+}
+
+
+.sidebar h2 {
+    color: #00A8FF;
+}
+
+
+.sidebar a {
+    color: white;
+    transition: 0.3s;
+}
+
+
+.sidebar a:hover {
+    background: #00A8FF;
+    color: #050B18;
+    box-shadow: 0 0 15px #00A8FF;
+}
+  .sidebar {
+    border-right: 1px solid #00A8FF;
+}
+
+.sidebar h2 {
+    color: #00A8FF;
+}
+
+.sidebar a {
+    transition: 0.3s;
+}
+  /* CyberLynx Dashboard Cards */
+
+.card {
+    background: rgba(255,255,255,0.95);
+    border-radius: 14px;
+    padding: 15px;
+    max-width: 220px;
+    min-height: 160px;
+}
+
+
+.card h2 {
+    font-size: 20px;
+}
+
+
+.card p {
+    font-size: 13px;
+}
+
+
+.icon {
+    width: 50px;
+    height: 50px;
+    font-size: 26px;
+}
+
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0,168,255,0.5);
+}
+  .dashboard {
+    height: auto;
+    min-height: unset;
+}
+  .dashboard {
+    grid-template-columns: repeat(3, 220px);
+    justify-content: start;
+}
+  /* CyberLynx Card Upgrade */
+
+.card {
+    background: #0B1220;
+    color: white;
+    border: 1px solid rgba(0,168,255,0.3);
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 0 15px rgba(0,168,255,0.15);
+}
+
+
+.card h2 {
+    color: #00A8FF;
+}
+
+
+.card p {
+    color: #cbd5e1;
+}
+
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #00A8FF;
+    box-shadow: 0 0 25px rgba(0,168,255,0.6);
+}
+
+
+/* Cyber Icons */
+
+.icon {
+    background: #050B18 !important;
+    border: 2px solid #00A8FF;
+    color: #00A8FF !important;
+    box-shadow: 0 0 15px rgba(0,168,255,0.5);
+}
+
+
+.icon i {
+    font-size: 28px;
+}
+/* CyberLynx Header Upgrade */
+
+.admin-content header {
+    background: linear-gradient(
+        135deg,
+        #050B18,
+        #003B66
+    );
+    border: 1px solid #00A8FF;
+    box-shadow: 0 0 20px rgba(0,168,255,0.35);
+}
+
+
+.admin-content header h1 {
+    color: #00A8FF;
+    text-shadow:
+        0 0 5px #00A8FF,
+        0 0 15px #00A8FF;
+}
+
+
+.admin-content header p {
+    color: #e2e8f0;
+}
+  /* CyberLynx System Overview Upgrade */
+
+.admin-card {
+    background: #0B1220;
+    color: white;
+    border: 1px solid rgba(0,168,255,0.4);
+    box-shadow: 0 0 20px rgba(0,168,255,0.2);
+}
+
+
+.admin-card h2 {
+    color: #00A8FF;
+    text-shadow:0 0 4px rgba(0,168,255,0.4);
+}
+
+
+.admin-card p {
+    background: #050B18;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border-left: 3px solid #00A8FF;
+    color: #e2e8f0;
+}
+  /* CyberLynx Footer */
+
+.cyber-footer {
+    background: #050B18;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 1px solid #00A8FF;
+    box-shadow: 0 -5px 20px rgba(0,168,255,0.2);
+}
+
+
+.cyber-footer p {
+    margin: 5px;
+    font-size: 14px;
+}
+
+
+.cyber-footer p:first-child {
+    color: #00A8FF;
+}
+  /* CyberLynx System Clock */
+
+#system-time {
+
+    color: #00A8FF;
+    font-family: "Courier New", monospace;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 
+        0 0 5px #00A8FF,
+        0 0 15px #00A8FF;
+
+}
+  /* CyberLynx Status Indicator */
+
+.system-status {
+    color: #00ff88;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+.status-dot {
+
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #00ff88;
+    border-radius: 50%;
+    margin-right: 8px;
+    box-shadow: 0 0 10px #00ff88;
+    animation: pulse 1.5s infinite;
+
+}
+
+
+@keyframes pulse {
+
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+  /* CyberLynx Sidebar Navigation Upgrade */
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: 0.3s ease;
+}
+
+
+.sidebar a i {
+    width: 22px;
+    color: #00A8FF;
+}
+
+
+.sidebar a:hover {
+
+    transform: translateX(8px);
+    background: rgba(0,168,255,0.15);
+    box-shadow: 0 0 15px rgba(0,168,255,0.5);
+
+}
+
+
+/* Active Dashboard Link */
+
+.sidebar a:first-of-type {
+
+    background: rgba(0,168,255,0.2);
+    border-left: 4px solid #00A8FF;
+
+}
+  /* J5 Logo Area */
+
+.j5-logo {
+
+    text-align:center;
+    padding-bottom:20px;
+    margin-bottom:20px;
+    border-bottom:1px solid rgba(0,168,255,0.4);
+
+}
+
+
+.logo-icon {
+
+    font-size:50px;
+    color:#FFD700;
+    text-shadow:
+    0 0 15px #FFD700;
+
+}
+
+
+.j5-logo h2 {
+
+    color:#00A8FF;
+    font-size:20px;
+    margin:8px 0;
+
+}
+
+
+.j5-logo p {
+
+    color:#94a3b8;
+    font-size:11px;
+    letter-spacing:3px;
+
+}
+  .j5-logo-image {
+
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    filter:drop-shadow(0 0 4px rgba(0,168,255,0.5));
+
+}
+  /* CyberLynx Admin Header Upgrade */
+
+.admin-header {
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:linear-gradient(
+        135deg,
+        #050B18,
+        #003B66
+    );
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:25px;
+
+}
+
+
+.header-brand {
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+}
+
+
+.header-logo {
+
+    width:65px;
+    height:65px;
+    object-fit:contain;
+    filter:drop-shadow(0 0 3px rgba(0,168,255,0.4));
+
+}
+
+
+.admin-header h1 {
+
+    color:#00A8FF;
+    margin:0;
+    text-shadow:0 0 3px rgba(0,168,255,0.4);
+
+}
+
+
+
+
+.admin-header p {
+
+    color:white;
+    margin-top:5px;
+
+}
+
+
+.system-badge {
+
+    background:#050B18;
+    color:#00FF88;
+    padding:10px 15px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+
+}
+
+
+.status-dot {
+
+    display:inline-block;
+    width:10px;
+    height:10px;
+    background:#00FF88;
+    border-radius:50%;
+    margin-right:8px;
+    box-shadow:0 0 10px #00FF88;
+
+}
+
+
+@media(max-width:768px){
+
+.admin-header{
+
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+
+}
+
+.header-brand{
+
+    flex-direction:column;
+
+}
+
+}

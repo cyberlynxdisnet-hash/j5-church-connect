@@ -1,0 +1,399 @@
+/* ============================================
+   ADMIN PAGES THEME OVERRIDES - DASHBOARD STYLING
+   ============================================ */
+
+/* Override all card styles to match dashboard theme */
+
+.user-card,
+.branch-card,
+.permission-card,
+.event-card,
+.giving-card,
+.profile-card,
+.prayer-card,
+.ministry-card,
+.visit-card,
+.follow-card,
+.attendance-card,
+.log-card,
+.settings-card,
+.role-card,
+.hub-card,
+.sermon-card,
+.email-card,
+.campaign-form,
+.analytics-card,
+.seo-card,
+.ai-card,
+.member-profile,
+.portal-card,
+.registration-card,
+.finance-card,
+.campaign-card,
+.report-card,
+.media-card,
+.stream-card,
+.announcement-card,
+.communication-card,
+.notification-card,
+.giving-record {
+    background: linear-gradient(135deg, #0D1B2A 0%, #0B1420 100%) !important;
+    margin: 20px !important;
+    padding: 20px !important;
+    border-radius: 16px !important;
+    box-shadow: 0 8px 24px rgba(10, 132, 255, 0.15) !important;
+    border: 1px solid rgba(0, 217, 255, 0.3) !important;
+    color: #b0c4ff !important;
+    transition: all 0.3s ease !important;
+}
+
+.user-card:hover,
+.branch-card:hover,
+.permission-card:hover,
+.event-card:hover,
+.giving-card:hover,
+.profile-card:hover,
+.prayer-card:hover,
+.ministry-card:hover,
+.visit-card:hover,
+.follow-card:hover,
+.attendance-card:hover,
+.log-card:hover,
+.settings-card:hover,
+.role-card:hover,
+.hub-card:hover,
+.sermon-card:hover,
+.email-card:hover,
+.campaign-form:hover,
+.analytics-card:hover,
+.seo-card:hover,
+.ai-card:hover,
+.member-profile:hover,
+.portal-card:hover,
+.registration-card:hover,
+.finance-card:hover,
+.campaign-card:hover,
+.report-card:hover,
+.media-card:hover,
+.stream-card:hover,
+.announcement-card:hover,
+.communication-card:hover,
+.notification-card:hover,
+.giving-record:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 16px 40px rgba(10, 132, 255, 0.3) !important;
+    border-color: #00D9FF !important;
+    background: linear-gradient(135deg, #0D1B2A 0%, #1a2c3c 100%) !important;
+}
+
+/* Card Headers */
+
+.user-card h2,
+.branch-card h2,
+.permission-card h2,
+.event-card h2,
+.giving-card h2,
+.profile-card h2,
+.prayer-card h2,
+.ministry-card h2,
+.visit-card h2,
+.follow-card h2,
+.attendance-card h2,
+.log-card h2,
+.settings-card h2,
+.role-card h2,
+.hub-card h2,
+.sermon-card h2,
+.email-card h2,
+.campaign-form h2,
+.analytics-card h2,
+.seo-card h2,
+.ai-card h2,
+.member-profile h2,
+.portal-card h2,
+.registration-card h2,
+.finance-card h2,
+.campaign-card h2,
+.report-card h2,
+.media-card h2,
+.stream-card h2,
+.announcement-card h2,
+.communication-card h2,
+.notification-card h2,
+.prayer-card h3,
+.ministry-card h3,
+.follow-card h3,
+.visit-card h3,
+.attendance-card h3,
+.log-card h3,
+.settings-card h3,
+.role-card h3,
+.registration-card h3 {
+    color: #00D9FF !important;
+    margin-top: 0 !important;
+    font-weight: 700 !important;
+    text-shadow: 0 0 10px rgba(0, 217, 255, 0.2) !important;
+}
+
+/* Card Paragraphs */
+
+.user-card p,
+.branch-card p,
+.permission-card p,
+.event-card p,
+.giving-card p,
+.profile-card p,
+.prayer-card p,
+.ministry-card p,
+.visit-card p,
+.follow-card p,
+.attendance-card p,
+.log-card p,
+.settings-card p,
+.role-card p,
+.hub-card p,
+.sermon-card p,
+.email-card p,
+.campaign-form p,
+.analytics-card p,
+.seo-card p,
+.ai-card p,
+.member-profile p,
+.portal-card p,
+.registration-card p,
+.finance-card p,
+.campaign-card p,
+.report-card p,
+.media-card p,
+.stream-card p,
+.announcement-card p,
+.communication-card p,
+.notification-card p,
+.giving-record p {
+    color: #b0c4ff !important;
+    font-weight: 500 !important;
+}
+
+/* Card Buttons */
+
+.user-card button,
+.branch-card button,
+.permission-card button,
+.event-card button,
+.giving-card button,
+.profile-card button,
+.prayer-card button,
+.ministry-card button,
+.visit-card button,
+.follow-card button,
+.attendance-card button,
+.log-card button,
+.settings-card button,
+.role-card button,
+.hub-card button,
+.sermon-card button,
+.email-card button,
+.campaign-form button,
+.analytics-card button,
+.seo-card button,
+.ai-card button,
+.member-profile button,
+.portal-card button,
+.registration-card button,
+.finance-card button,
+.campaign-card button,
+.report-card button,
+.media-card button,
+.stream-card button,
+.announcement-card button,
+.communication-card button,
+.notification-card button,
+.giving-record button {
+    background: linear-gradient(135deg, #0A84FF 0%, #0066CC 100%) !important;
+    color: white !important;
+    border: none !important;
+    padding: 12px 20px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 12px rgba(10, 132, 255, 0.3) !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.user-card button:hover,
+.branch-card button:hover,
+.permission-card button:hover,
+.event-card button:hover,
+.giving-card button:hover,
+.profile-card button:hover,
+.prayer-card button:hover,
+.ministry-card button:hover,
+.visit-card button:hover,
+.follow-card button:hover,
+.attendance-card button:hover,
+.log-card button:hover,
+.settings-card button:hover,
+.role-card button:hover,
+.hub-card button:hover,
+.sermon-card button:hover,
+.email-card button:hover,
+.campaign-form button:hover,
+.analytics-card button:hover,
+.seo-card button:hover,
+.ai-card button:hover,
+.member-profile button:hover,
+.portal-card button:hover,
+.registration-card button:hover,
+.finance-card button:hover,
+.campaign-card button:hover,
+.report-card button:hover,
+.media-card button:hover,
+.stream-card button:hover,
+.announcement-card button:hover,
+.communication-card button:hover,
+.notification-card button:hover,
+.giving-record button:hover {
+    background: linear-gradient(135deg, #00D9FF 0%, #0099CC 100%) !important;
+    color: #0D1B2A !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(10, 132, 255, 0.4) !important;
+}
+
+/* Dashboard Sections Styling */
+
+.dashboard.users-section,
+.dashboard.branches-section,
+.dashboard.permissions-section,
+.dashboard.events-section,
+.dashboard.giving-section,
+.dashboard.ministry-section {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 20px !important;
+    padding: 30px !important;
+    flex: 1 !important;
+}
+
+/* Primary Button Override */
+
+.btn-primary {
+    background: linear-gradient(135deg, #0A84FF 0%, #0066CC 100%) !important;
+    color: white !important;
+    border: none !important;
+    padding: 12px 20px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 12px rgba(10, 132, 255, 0.3) !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #00D9FF 0%, #0099CC 100%) !important;
+    color: #0D1B2A !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(10, 132, 255, 0.4) !important;
+}
+
+/* Add Button Styling */
+
+.add-button {
+    display: inline-block !important;
+    margin: 20px !important;
+    padding: 14px 25px !important;
+    background: linear-gradient(135deg, #0A84FF 0%, #0066CC 100%) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 12px rgba(10, 132, 255, 0.3) !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.add-button:hover {
+    background: linear-gradient(135deg, #00D9FF 0%, #0099CC 100%) !important;
+    color: #0D1B2A !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(10, 132, 255, 0.4) !important;
+}
+
+/* Profile Card Specific */
+
+.profile-card h3,
+.profile-card h4 {
+    color: #00D9FF !important;
+    font-weight: 700 !important;
+    margin-bottom: 10px !important;
+}
+
+/* Status indicators */
+
+.status-present,
+.status-active,
+.status-open {
+    color: #00D9FF !important;
+    font-weight: bold !important;
+}
+
+.status-absent,
+.status-inactive,
+.status-closed {
+    color: #FF6B6B !important;
+    font-weight: bold !important;
+}
+
+/* Utility Classes */
+
+.text-cyan {
+    color: #00D9FF !important;
+}
+
+.text-blue {
+    color: #0A84FF !important;
+}
+
+.text-gray {
+    color: #7C8AA8 !important;
+}
+
+.text-light {
+    color: #b0c4ff !important;
+}
+
+.bg-primary {
+    background: linear-gradient(135deg, #0D1B2A 0%, #0B1420 100%) !important;
+}
+
+.bg-hover:hover {
+    background: rgba(10, 132, 255, 0.15) !important;
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 768px) {
+    .dashboard.users-section,
+    .dashboard.branches-section,
+    .dashboard.permissions-section,
+    .dashboard.events-section,
+    .dashboard.giving-section,
+    .dashboard.ministry-section {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .user-card,
+    .branch-card,
+    .permission-card,
+    .event-card,
+    .giving-card,
+    .profile-card {
+        margin: 10px !important;
+        padding: 15px !important;
+    }
+}

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>
+J5 Member Portal
+</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1>
+📱 J5 Member Portal
+</h1>
+
+<p>
+Johane the 5th of Africa International Church
+</p>
+
+</header>
+
+
+
+<div class="member-profile">
+
+
+
+  <h2 id="memberName">
+👤 Loading Member...
+</h2>
+  
+<p id="memberId">
+Member ID: Loading...
+</p>
+
+<p id="memberBranch">
+Branch: Loading...
+</p>
+
+<p id="memberMinistry">
+Ministry: Loading...
+</p>
+
+<p id="memberStatus">
+Status: Loading...
+</p>
+
+<p>
+Active Member
+</p>
+  
+<p>
+Account Status: Active
+</p>
+
+<p>
+Main Branch | Worship Ministry
+</p>
+
+
+</div>
+
+
+
+
+<section class="dashboard">
+
+
+
+<div class="icon">
+📢
+</div>
+
+  <a href="member-announcements.html" class="card blue">
+
+<div class="icon">
+📢
+</div>
+
+<h2>
+Announcements
+</h2>
+
+<p>
+Church updates
+</p>
+
+</a>
+
+<p>
+Church updates
+</p>
+
+</>
+
+
+
+
+
+<div class="icon">
+📅
+</div>
+
+<a href="events-data.html" class="card gold">
+
+<div class="icon">
+📅
+</div>
+
+<h2>
+Events
+</h2>
+
+
+<p>
+Upcoming programmes
+</p>
+
+</>
+
+
+
+
+
+<div class="icon">
+🎙️
+</div>
+
+<a href="member-sermons.html" class="card green">
+
+<div class="icon">
+🎙️
+</div>
+
+
+<h2>
+Sermons
+</h2>
+  
+
+<p>
+Watch teachings
+</p>
+
+</a>
+
+<p>
+Watch teachings
+</p>
+
+</>
+
+
+
+
+
+<div class="icon">
+🙏
+</div>
+
+
+<a href="prayer-data.html" class="card red">
+
+<div class="icon">
+🙏
+</div>
+
+<h2>
+Prayer
+</h2>
+
+<p>
+View prayer requests
+</p>
+
+</a>
+
+</>
+
+<p>
+Send requests
+</p>
+
+</>
+
+
+
+
+<div class="icon">
+💰
+</div>
+
+
+<a href="giving-data.html" class="card blue">
+
+<div class="icon">
+💰
+</div>
+
+<h2>
+Giving
+</h2>
+
+<p>
+View my giving history
+</p>
+
+</a>
+
+</>
+
+<p>
+My giving
+</p>
+
+</>
+
+
+
+
+<div class="icon">
+📊
+</div>
+
+
+
+<a href="attendance-data.html" class="card gold">
+
+<div class="icon">
+📊
+</div>
+
+<h2>
+Attendance
+</h2>
+
+<p>
+View my records
+</p>
+
+</a>
+
+</>
+
+<p>
+My records
+</p>
+
+</>
+
+
+
+</section>
+
+
+
+
+
+<div class="portal-card">
+
+
+<h2>
+🔔 Latest Updates
+</h2>
+
+
+<p>
+Sunday Worship Service — 09:00 AM
+</p>
+
+
+<p>
+Youth Conference Registration Open
+</p>
+
+
+<p>
+Bible Study Wednesday Evening
+</p>
+
+
+
+</div>
+
+
+
+
+<div class="portal-card">
+
+
+<h2>
+⚙️ Account Settings
+</h2>
+
+
+<p>
+Update profile</p>
+
+
+<p>
+Notification settings</p>
+
+
+<p>
+Security</p>
+
+
+</div>
+
+
+
+<script src="database.js"></script>
+<script>
+
+const database = loadDatabase();
+
+console.log(database);
+
+</script>
+<script src="database.js">
+  document.getElementById("memberId").innerHTML =
+"Member ID: " + member.id;
+
+document.getElementById("memberBranch").innerHTML =
+"Branch: " + member.branch;
+
+document.getElementById("memberMinistry").innerHTML =
+"Ministry: " + member.ministry;
+
+document.getElementById("memberStatus").innerHTML =
+"Status: " + member.status;
+</script>
+</body>
+
+</html>

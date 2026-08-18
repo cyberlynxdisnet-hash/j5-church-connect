@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>J5 Church Connect Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="login-page">
+
+
+<div class="login-box">
+
+<h1>J5</h1>
+
+<h2>Church Connect</h2>
+
+<p>
+Johane the 5th of Africa International Church
+</p>
+
+
+<input type="text" id="username" placeholder="Username">
+
+
+
+<input type="password" id="password" placeholder="Password">
+
+
+<button onclick="loginUser()">
+Login
+</button>
+
+<p class="forgot">
+Forgot Password?
+</p>
+
+
+</div>
+
+<script src="database.js"></script>
+<script>
+
+function loginUser(){
+
+    const username =
+    document.getElementById("username").value;
+
+
+    const password =
+    document.getElementById("password").value;
+
+
+    const user =
+    churchDatabase.users.find(
+        u => u.username === username &&
+        u.password === password
+    );
+
+
+    if(user){
+      
+      localStorage.setItem(
+    "loggedInUser",
+    JSON.stringify(user)
+);
+      
+
+
+        if(user.role === "Admin"){
+
+    window.location.href =
+    "admin-dashboard.html";
+
+}
+
+else if(user.role === "Member"){
+
+    window.location.href =
+    "member-home.html";
+
+}
+
+else if(user.role === "Pastor"){
+
+    window.location.href =
+    "ministry-data.html";
+
+}
+
+    }
+
+    else{
+
+        
+
+    }
+
+}
+
+</script> 
+</body>
+</html>
