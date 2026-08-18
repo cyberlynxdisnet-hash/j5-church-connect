@@ -8,147 +8,231 @@ User Management
 </title>
 
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 
 <body>
 
+<button class="menu-toggle" onclick="toggleSidebar()">
+<i class="fa-solid fa-bars"></i>
+</button>
 
-<header>
+<div class="admin-layout">
 
+<aside class="sidebar">
+
+<div class="j5-logo">
+
+<div class="logo-icon">
+
+<img src="IMG-20260814-WA0005-removebg-preview.png" class="j5-logo-image" alt="J5 Church Logo">
+
+</div>
+
+<h2>
+J5 Church Connect
+</h2>
+
+<p>
+CYBERLYNX SYSTEM
+</p>
+
+</div>
+
+<a href="admin-dashboard.html">
+<i class="fa-solid fa-house"></i> Dashboard
+</a>
+
+<a href="user-management.html" class="active">
+<i class="fa-solid fa-users"></i> Members
+</a>
+
+<a href="branch-management.html">
+<i class="fa-solid fa-church"></i> Branches
+</a>
+
+<a href="permission-control.html">
+<i class="fa-solid fa-shield-halved"></i> Security
+</a>
+
+<a href="events-data.html">
+<i class="fa-solid fa-calendar"></i> Events
+</a>
+
+<a href="giving-data.html">
+<i class="fa-solid fa-coins"></i> Finance
+</a>
+
+<a href="ministry-data.html">
+<i class="fa-solid fa-people-group"></i> Ministries
+</a>
+
+<a href="login.html">
+<i class="fa-solid fa-right-from-bracket"></i> Logout
+</a>
+
+</aside>
+
+<main class="admin-content">
+
+<header class="admin-header">
+
+<div class="header-brand">
+
+<img src="IMG-20260814-WA0005-removebg-preview.png" class="header-logo" alt="J5 Church Logo">
+
+<div>
 <h1>
-👥 User Management
+<i class="fa-solid fa-users"></i> User Management
 </h1>
 
 <p>
-J5 Church Connect Administration
+Manage church members & administrators
 </p>
+</div>
+
+</div>
+
+<a href="admin-dashboard.html" class="back-button">
+<i class="fa-solid fa-arrow-left"></i> Back to Dashboard
+</a>
 
 </header>
 
-
-
+<section class="dashboard users-section">
 
 <div class="user-card">
 
-
 <h2>
-👑 Admin User
+<i class="fa-solid fa-crown"></i> Admin User
 </h2>
-
 
 <p>
 Role:
 Super Administrator
 </p>
 
-
 <p>
 Status:
 ✅ Active
 </p>
-
 
 <p>
 Last Login:
 Today
 </p>
 
-
-<button>
+<button class="btn-primary" onclick="openManageUserModal(1)">
 Manage User
 </button>
 
-
 </div>
-
-
-
-
 
 <div class="user-card">
 
-
 <h2>
-⛪ Pastor John
+<i class="fa-solid fa-person-chalkboard"></i> Pastor John
 </h2>
-
 
 <p>
 Role:
 Pastor
 </p>
 
-
 <p>
 Department:
 Pastoral Care
 </p>
-
 
 <p>
 Status:
 ✅ Active
 </p>
 
-
-<button>
+<button class="btn-primary" onclick="openManageUserModal(2)">
 Manage User
 </button>
 
-
 </div>
-
-
-
-
 
 <div class="user-card">
 
-
 <h2>
-📢 Media Team Member
+<i class="fa-solid fa-microphone"></i> Media Team Member
 </h2>
-
 
 <p>
 Role:
 Social Media Manager
 </p>
 
-
 <p>
 Department:
 Media Ministry
 </p>
-
 
 <p>
 Status:
 Active
 </p>
 
-
-<button>
+<button class="btn-primary" onclick="openManageUserModal(3)">
 Manage User
 </button>
 
-
 </div>
 
+</section>
 
+<button class="add-button" onclick="createNewUser()">
 
-
-
-<button class="add-button">
-
-+ Create New User
+<i class="fa-solid fa-plus"></i> Create New User
 
 </button>
 
+<!-- USER MANAGEMENT MODAL -->
+<div class="modal" id="userModal">
 
+<div class="modal-content">
 
+<div class="modal-header">
+<h2><i class="fa-solid fa-user-pen"></i> Manage User</h2>
+<button class="close-btn" onclick="closeModal('userModal')">✕</button>
+</div>
+
+<div class="modal-body">
+
+<input type="hidden" id="editUserId" value="">
+
+<div class="form-group">
+<label>User Name</label>
+<input type="text" id="userNameInput" placeholder="Enter user name" required>
+</div>
+
+<div class="form-group">
+<label>User Role</label>
+<input type="text" id="userRoleInput" placeholder="Enter user role" required>
+</div>
+
+</div>
+
+<div class="modal-footer">
+<button class="btn-cancel" onclick="closeModal('userModal')">Cancel</button>
+<button class="btn-delete" onclick="deleteUser(parseInt(document.getElementById('editUserId').value))" style="display: none;" id="deleteBtn">Delete</button>
+<button class="btn-save" onclick="saveUser()">Save Changes</button>
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+<script src="app.js"></script>
 
 </body>
 

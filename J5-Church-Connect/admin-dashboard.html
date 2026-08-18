@@ -14,7 +14,7 @@ Admin Dashboard
 <body>
   
 <button class="menu-toggle" onclick="toggleSidebar()">
-☰
+<i class="fa-solid fa-bars"></i>
 </button>
 
 <div class="admin-layout">
@@ -26,7 +26,7 @@ Admin Dashboard
 
 <div class="logo-icon">
 
-<img src="IMG-20260814-WA0005-removebg-preview.png/IMG-20260814-WA0005-removebg-preview.png" class="j5-logo-image">
+<img src="cfile://" class="j5-logo-image" alt="J5 Church Logo">
 
 </div>
 
@@ -87,8 +87,7 @@ CYBERLYNX SYSTEM
 
 <div class="header-brand">
 
-<img src="IMG-20260814-WA0005-removebg-preview.png/IMG-20260814-WA0005-removebg-preview.png"
-" class="header-logo">
+<img src="IMG-20260814-WA0005-removebg-preview.png/IMG-20260814-WA0005-removebg-preview.png" class="J5 Church Logo">
 
 <div>
 <h1>
@@ -212,31 +211,36 @@ Intelligence status
 
 
 
-<div class="admin-card">
+<div class="admin-card overview-stats">
 
 <h2>
-System Overview
+<i class="fa-solid fa-chart-line"></i> System Overview
 </h2>
 
-<p>
-👥 Total Members: 4,500
-</p>
+<div class="stat-row">
+<span><i class="fa-solid fa-users"></i> Total Members:</span>
+<strong>4,500</strong>
+</div>
 
-<p>
-⛪ Active Branches: 1
-</p>
+<div class="stat-row">
+<span><i class="fa-solid fa-church"></i> Active Branches:</span>
+<strong>1</strong>
+</div>
 
-<p>
-📅 Upcoming Events: 12
-</p>
+<div class="stat-row">
+<span><i class="fa-solid fa-calendar"></i> Upcoming Events:</span>
+<strong>12</strong>
+</div>
 
-<p>
-🙏 Prayer Requests: 25
-</p>
+<div class="stat-row">
+<span><i class="fa-solid fa-hands-praying"></i> Prayer Requests:</span>
+<strong>25</strong>
+</div>
 
-<p>
-💰 Monthly Giving: Active
-</p>
+<div class="stat-row">
+<span><i class="fa-solid fa-hand-holding-dollar"></i> Monthly Giving:</span>
+<strong>Active</strong>
+</div>
 
 </div>
 
@@ -261,7 +265,7 @@ function updateTime(){
     const now = new Date();
 
     document.getElementById("system-time").innerHTML =
-    "🕒 " + now.toLocaleString();
+    "<i class='fa-solid fa-clock'></i> " + now.toLocaleString();
 
 }
 

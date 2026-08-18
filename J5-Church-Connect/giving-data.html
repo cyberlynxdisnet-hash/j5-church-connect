@@ -8,102 +8,235 @@ Giving Records
 </title>
 
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 
 <body>
 
+<button class="menu-toggle" onclick="toggleSidebar()">
+<i class="fa-solid fa-bars"></i>
+</button>
 
-<header>
+<div class="admin-layout">
 
+<aside class="sidebar">
+
+<div class="j5-logo">
+
+<div class="logo-icon">
+
+<img src="IMG-20260814-WA0005-removebg-preview.png" class="j5-logo-image" alt="J5 Church Logo">
+
+</div>
+
+<h2>
+J5 Church Connect
+</h2>
+
+<p>
+CYBERLYNX SYSTEM
+</p>
+
+</div>
+
+<a href="admin-dashboard.html">
+<i class="fa-solid fa-house"></i> Dashboard
+</a>
+
+<a href="user-management.html">
+<i class="fa-solid fa-users"></i> Members
+</a>
+
+<a href="branch-management.html">
+<i class="fa-solid fa-church"></i> Branches
+</a>
+
+<a href="permission-control.html">
+<i class="fa-solid fa-shield-halved"></i> Security
+</a>
+
+<a href="events-data.html">
+<i class="fa-solid fa-calendar"></i> Events
+</a>
+
+<a href="giving-data.html" class="active">
+<i class="fa-solid fa-coins"></i> Finance
+</a>
+
+<a href="ministry-data.html">
+<i class="fa-solid fa-people-group"></i> Ministries
+</a>
+
+<a href="login.html">
+<i class="fa-solid fa-right-from-bracket"></i> Logout
+</a>
+
+</aside>
+
+<main class="admin-content">
+
+<header class="admin-header">
+
+<div class="header-brand">
+
+<img src="IMG-20260814-WA0005-removebg-preview.png" class="header-logo" alt="J5 Church Logo">
+
+<div>
 <h1>
-💰 Giving Records
+<i class="fa-solid fa-coins"></i> Giving Records
 </h1>
 
 <p>
-J5 Church Connect Finance System
+Financial giving & donations tracking
 </p>
+</div>
+
+</div>
+
+<a href="admin-dashboard.html" class="back-button">
+<i class="fa-solid fa-arrow-left"></i> Back to Dashboard
+</a>
 
 </header>
 
-
-
+<section class="dashboard giving-section">
 
 <div class="giving-card">
 
-
 <h2>
-John Member
+<i class="fa-solid fa-user"></i> John Member
 </h2>
 
-
 <p>
-Member ID:
+<i class="fa-solid fa-id-card"></i> Member ID:
 J5-001
 </p>
 
-
 <p>
-Type:
+<i class="fa-solid fa-church"></i> Type:
 Tithe
 </p>
 
-
 <p>
-Amount:
+<i class="fa-solid fa-dollar-sign"></i> Amount:
 $500
 </p>
 
-
 <p>
-Status:
-✅ Received
+<i class="fa-solid fa-check" style="color: #00D9FF;"></i> Status:
+Received
 </p>
 
+<button class="btn-primary" onclick="openManageGivingModal(1)">
+View Record
+</button>
 
 </div>
-
-
-
-
 
 <div class="giving-card">
 
-
 <h2>
-Mary Member
+<i class="fa-solid fa-user"></i> Mary Member
 </h2>
 
-
 <p>
-Member ID:
+<i class="fa-solid fa-id-card"></i> Member ID:
 J5-002
 </p>
 
-
 <p>
-Type:
+<i class="fa-solid fa-gift"></i> Type:
 Offering
 </p>
 
-
 <p>
-Amount:
+<i class="fa-solid fa-dollar-sign"></i> Amount:
 $100
 </p>
 
-
 <p>
-Status:
-✅ Received
+<i class="fa-solid fa-check" style="color: #00D9FF;"></i> Status:
+Received
 </p>
 
+<button class="btn-primary" onclick="openManageGivingModal(2)">
+View Record
+</button>
 
 </div>
 
+</section>
 
+<button class="add-button" onclick="createNewGiving()">
+<i class="fa-solid fa-plus"></i> Record New Giving
+</button>
 
+<!-- GIVING MANAGEMENT MODAL -->
+<div class="modal" id="givingModal">
+
+<div class="modal-content">
+
+<div class="modal-header">
+<h2><i class="fa-solid fa-hand-holding-heart"></i> Manage Giving Record</h2>
+<button class="close-btn" onclick="closeModal('givingModal')">✕</button>
+</div>
+
+<div class="modal-body">
+
+<input type="hidden" id="editGivingId" value="">
+
+<div class="form-group">
+<label>Member Name</label>
+<input type="text" id="givingNameInput" placeholder="Enter member name" required>
+</div>
+
+<div class="form-group">
+<label>Type</label>
+<select id="givingTypeInput" required>
+<option value="">Select Type</option>
+<option value="Tithe">Tithe</option>
+<option value="Offering">Offering</option>
+<option value="Donation">Donation</option>
+<option value="Mission">Mission</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Amount ($)</label>
+<input type="number" id="givingAmountInput" placeholder="Enter amount" step="0.01" required>
+</div>
+
+<div class="form-group">
+<label>Status</label>
+<select id="givingStatusInput" required>
+<option value="">Select Status</option>
+<option value="Received">Received</option>
+<option value="Pending">Pending</option>
+<option value="Confirmed">Confirmed</option>
+</select>
+</div>
+
+</div>
+
+<div class="modal-footer">
+<button class="btn-cancel" onclick="closeModal('givingModal')">Cancel</button>
+<button class="btn-delete" onclick="deleteGiving(parseInt(document.getElementById('editGivingId').value))" style="display: none;" id="deleteGivingBtn">Delete</button>
+<button class="btn-save" onclick="saveGiving()">Save Changes</button>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="app.js"></script>
 
 </body>
 

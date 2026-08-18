@@ -8,114 +8,237 @@ Events Records
 </title>
 
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 
 <body>
 
+<button class="menu-toggle" onclick="toggleSidebar()">
+<i class="fa-solid fa-bars"></i>
+</button>
 
-<header>
+<div class="admin-layout">
 
+<aside class="sidebar">
+
+<div class="j5-logo">
+
+<div class="logo-icon">
+
+<img src="IMG-20260814-WA0005-removebg-preview.png" class="j5-logo-image" alt="J5 Church Logo">
+
+</div>
+
+<h2>
+J5 Church Connect
+</h2>
+
+<p>
+CYBERLYNX SYSTEM
+</p>
+
+</div>
+
+<a href="admin-dashboard.html">
+<i class="fa-solid fa-house"></i> Dashboard
+</a>
+
+<a href="user-management.html">
+<i class="fa-solid fa-users"></i> Members
+</a>
+
+<a href="branch-management.html">
+<i class="fa-solid fa-church"></i> Branches
+</a>
+
+<a href="permission-control.html">
+<i class="fa-solid fa-shield-halved"></i> Security
+</a>
+
+<a href="events-data.html" class="active">
+<i class="fa-solid fa-calendar"></i> Events
+</a>
+
+<a href="giving-data.html">
+<i class="fa-solid fa-coins"></i> Finance
+</a>
+
+<a href="ministry-data.html">
+<i class="fa-solid fa-people-group"></i> Ministries
+</a>
+
+<a href="login.html">
+<i class="fa-solid fa-right-from-bracket"></i> Logout
+</a>
+
+</aside>
+
+<main class="admin-content">
+
+<header class="admin-header">
+
+<div class="header-brand">
+
+<img src="IMG-20260814-WA0005-removebg-preview.png" class="header-logo" alt="J5 Church Logo">
+
+<div>
 <h1>
-📅 Church Events
+<i class="fa-solid fa-calendar"></i> Church Events
 </h1>
 
 <p>
-J5 Church Connect Events System
+Events management & registration
 </p>
+</div>
+
+</div>
+
+<a href="admin-dashboard.html" class="back-button">
+<i class="fa-solid fa-arrow-left"></i> Back to Dashboard
+</a>
 
 </header>
 
-
-
+<section class="dashboard events-section">
 
 <div class="event-card">
 
-
 <h2>
-Sunday Worship Service
+<i class="fa-solid fa-cross"></i> Sunday Worship Service
 </h2>
 
-
 <p>
-Date:
+<i class="fa-solid fa-calendar-days"></i> Date:
 23 August 2026
 </p>
 
-
 <p>
-Time:
+<i class="fa-solid fa-clock"></i> Time:
 09:00 AM
 </p>
 
-
 <p>
-Location:
+<i class="fa-solid fa-location-dot"></i> Location:
 Main Sanctuary
 </p>
 
-
 <p>
-Ministry:
+<i class="fa-solid fa-people-group"></i> Ministry:
 General Worship
 </p>
 
-
 <p>
-Registration:
+<i class="fa-solid fa-check-circle"></i> Registration:
 Open
 </p>
 
+<button class="btn-primary" onclick="openManageEventModal(1)">
+Manage Event
+</button>
 
 </div>
-
-
-
-
 
 <div class="event-card">
 
-
 <h2>
-Youth Conference
+<i class="fa-solid fa-microphone"></i> Youth Conference
 </h2>
 
-
 <p>
-Date:
+<i class="fa-solid fa-calendar-days"></i> Date:
 05 September 2026
 </p>
 
-
 <p>
-Time:
+<i class="fa-solid fa-clock"></i> Time:
 10:00 AM
 </p>
 
-
 <p>
-Location:
+<i class="fa-solid fa-location-dot"></i> Location:
 Church Grounds
 </p>
 
-
 <p>
-Ministry:
+<i class="fa-solid fa-people-group"></i> Ministry:
 Youth Ministry
 </p>
 
-
 <p>
-Registration:
+<i class="fa-solid fa-check-circle"></i> Registration:
 Open
 </p>
 
+<button class="btn-primary" onclick="openManageEventModal(2)">
+Manage Event
+</button>
 
 </div>
 
+</section>
 
+<button class="add-button" onclick="createNewEvent()">
+<i class="fa-solid fa-plus"></i> Create New Event
+</button>
 
+<!-- EVENT MANAGEMENT MODAL -->
+<div class="modal" id="eventModal">
+
+<div class="modal-content">
+
+<div class="modal-header">
+<h2><i class="fa-solid fa-calendar"></i> Manage Event</h2>
+<button class="close-btn" onclick="closeModal('eventModal')">✕</button>
+</div>
+
+<div class="modal-body">
+
+<input type="hidden" id="editEventId" value="">
+
+<div class="form-group">
+<label>Event Name</label>
+<input type="text" id="eventNameInput" placeholder="Enter event name" required>
+</div>
+
+<div class="form-group">
+<label>Event Date</label>
+<input type="date" id="eventDateInput" required>
+</div>
+
+<div class="form-group">
+<label>Event Time</label>
+<input type="time" id="eventTimeInput" required>
+</div>
+
+<div class="form-group">
+<label>Location</label>
+<input type="text" id="eventLocationInput" placeholder="Enter event location" required>
+</div>
+
+<div class="form-group">
+<label>Ministry</label>
+<input type="text" id="eventMinistryInput" placeholder="Enter ministry" required>
+</div>
+
+</div>
+
+<div class="modal-footer">
+<button class="btn-cancel" onclick="closeModal('eventModal')">Cancel</button>
+<button class="btn-delete" onclick="deleteEvent(parseInt(document.getElementById('editEventId').value))" style="display: none;" id="deleteEventBtn">Delete</button>
+<button class="btn-save" onclick="saveEvent()">Save Changes</button>
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+<script src="app.js"></script>
 
 </body>
 

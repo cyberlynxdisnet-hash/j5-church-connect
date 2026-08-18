@@ -8,113 +8,212 @@ Branch Management
 </title>
 
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 
 <body>
 
+<button class="menu-toggle" onclick="toggleSidebar()">
+<i class="fa-solid fa-bars"></i>
+</button>
 
-<header>
+<div class="admin-layout">
 
+<aside class="sidebar">
+
+<div class="j5-logo">
+
+<div class="logo-icon">
+
+<img src="IMG-20260814-WA0005-removebg-preview.png" class="j5-logo-image" alt="J5 Church Logo">
+
+</div>
+
+<h2>
+J5 Church Connect
+</h2>
+
+<p>
+CYBERLYNX SYSTEM
+</p>
+
+</div>
+
+<a href="admin-dashboard.html">
+<i class="fa-solid fa-house"></i> Dashboard
+</a>
+
+<a href="user-management.html">
+<i class="fa-solid fa-users"></i> Members
+</a>
+
+<a href="branch-management.html" class="active">
+<i class="fa-solid fa-church"></i> Branches
+</a>
+
+<a href="permission-control.html">
+<i class="fa-solid fa-shield-halved"></i> Security
+</a>
+
+<a href="events-data.html">
+<i class="fa-solid fa-calendar"></i> Events
+</a>
+
+<a href="giving-data.html">
+<i class="fa-solid fa-coins"></i> Finance
+</a>
+
+<a href="ministry-data.html">
+<i class="fa-solid fa-people-group"></i> Ministries
+</a>
+
+<a href="login.html">
+<i class="fa-solid fa-right-from-bracket"></i> Logout
+</a>
+
+</aside>
+
+<main class="admin-content">
+
+<header class="admin-header">
+
+<div class="header-brand">
+
+<img src="IMG-20260814-WA0005-removebg-preview.png" class="header-logo" alt="J5 Church Logo">
+
+<div>
 <h1>
-⛪ Branch Management
+<i class="fa-solid fa-church"></i> Branch Management
 </h1>
 
 <p>
-J5 Church Connect Multi-Branch System
+Multi-branch control & oversight
 </p>
+</div>
+
+</div>
+
+<a href="admin-dashboard.html" class="back-button">
+<i class="fa-solid fa-arrow-left"></i> Back to Dashboard
+</a>
 
 </header>
 
-
-
+<section class="dashboard branches-section">
 
 <div class="branch-card">
 
-
 <h2>
-🇿🇼 Mvuma Holy Land Main Branch
+<i class="fa-solid fa-flag-zimbabwe"></i> Mvuma Holy Land Main Branch
 </h2>
 
-
 <p>
-📍 Location:
+<i class="fa-solid fa-location-dot"></i> Location:
 Midlands, Zimbabwe
 </p>
 
-
 <p>
-👤 Pastor:
+<i class="fa-solid fa-person-chalkboard"></i> Pastor:
 Bishop Andby Makururu
 </p>
 
-
 <p>
-👥 Members:
+<i class="fa-solid fa-people-group"></i> Members:
 4,500
 </p>
 
-
 <p>
-📊 Sunday Attendance:
+<i class="fa-solid fa-chart-column"></i> Sunday Attendance:
 1,200
 </p>
 
-
-<button>
+<button class="btn-primary" onclick="openManageBranchModal(1)">
 View Branch
 </button>
 
-
 </div>
-
-
-
-
 
 <div class="branch-card">
 
-
 <h2>
-🌍 International Branch
+<i class="fa-solid fa-globe"></i> International Branch
 </h2>
 
-
 <p>
-📍 Location:
+<i class="fa-solid fa-location-dot"></i> Location:
 Coming Soon
 </p>
 
-
 <p>
-👤 Pastor:
+<i class="fa-solid fa-person-chalkboard"></i> Pastor:
 Not Assigned
 </p>
 
-
 <p>
-👥 Members:
+<i class="fa-solid fa-people-group"></i> Members:
 0
 </p>
 
-
-<button>
+<button class="btn-primary" onclick="openManageBranchModal(2)">
 Manage Branch
 </button>
 
+</div>
+
+</section>
+
+<button class="add-button" onclick="createNewBranch()">
+<i class="fa-solid fa-plus"></i> Add New Branch
+</button>
+
+<!-- BRANCH MANAGEMENT MODAL -->
+<div class="modal" id="branchModal">
+
+<div class="modal-content">
+
+<div class="modal-header">
+<h2><i class="fa-solid fa-church"></i> Manage Branch</h2>
+<button class="close-btn" onclick="closeModal('branchModal')">✕</button>
+</div>
+
+<div class="modal-body">
+
+<input type="hidden" id="editBranchId" value="">
+
+<div class="form-group">
+<label>Branch Name</label>
+<input type="text" id="branchNameInput" placeholder="Enter branch name" required>
+</div>
+
+<div class="form-group">
+<label>Location</label>
+<input type="text" id="branchLocationInput" placeholder="Enter location" required>
+</div>
+
+<div class="form-group">
+<label>Pastor Name</label>
+<input type="text" id="branchPastorInput" placeholder="Enter pastor name" required>
+</div>
 
 </div>
 
+<div class="modal-footer">
+<button class="btn-cancel" onclick="closeModal('branchModal')">Cancel</button>
+<button class="btn-delete" onclick="deleteBranch(parseInt(document.getElementById('editBranchId').value))" style="display: none;" id="deleteBranchBtn">Delete</button>
+<button class="btn-save" onclick="saveBranch()">Save Changes</button>
+</div>
 
+</div>
 
+</div>
 
-<button class="add-button">
-+ Add New Branch
-</button>
+</main>
 
+</div>
 
-
+<script src="app.js"></script>
 
 </body>
 
